@@ -75,6 +75,10 @@ body {
   background-color: #53cf00;
 }
 
+.offcanvas_search {
+  top: 160px !important;
+}
+
 .register-card {
   width: 750px;
 }
@@ -91,6 +95,10 @@ body {
   border-left: 5px solid #21A028;
 }
 
+.text-dark-green {
+  color: #21A028;
+}
+
 .fs-30 {
   font-size: 30px;
 }
@@ -101,8 +109,26 @@ body {
   background-color: #ff5733;
 }
 
+.nav-navbar .nav {
+  border-top: 2px solid #21A028;
+  min-width: 16rem;
+  border-radius: 0;
+}
+
+.nav-navbar .nav .nav-link:hover {
+  color: #21A028;
+}
+
+.nav-navbar .nav-link {
+  letter-spacing: 0;
+}
+
+.navbar-dark .nav-navbar > .nav-link.active {
+  color: #21A028;
+}
+
 .navbar-dark .nav-navbar > .nav-link {
-  color: #343434;
+  color: #707070;
 }
 
 .navbar-dark .nav-navbar > .nav-link:hover {
@@ -334,12 +360,6 @@ body {
   .meduim-banner-size {
     width: 300px !important;
     height: 250px !important;
-  }
-}
-
-@media screen and (max-width: 991.98px) {
-  .navbar-expand-lg .navbar-mobile {
-    background-color: #7ac977 !important;
   }
 }
 

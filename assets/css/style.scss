@@ -76,6 +76,9 @@ body{
 //     max-height: 722px;
 //     min-height: 722px;
 // }
+.offcanvas_search{
+    top: 160px !important;
+}
 .register-card{
     width: 750px;
 }
@@ -88,6 +91,9 @@ body{
 .border-5{
     border-left:5px solid $green-success; 
 }
+.text-dark-green{
+    color: $green-success;
+}
 .fs-30{
     font-size: 30px;
 }
@@ -96,8 +102,22 @@ body{
     height: 10px;
     background-color: #ff5733;
 }
+.nav-navbar .nav{
+    border-top: 2px solid #21A028;
+    min-width: 16rem;
+    border-radius: 0;
+}
+.nav-navbar .nav .nav-link:hover{
+    color: #21A028;
+}
+.nav-navbar .nav-link{
+    letter-spacing: 0;
+}
+.navbar-dark .nav-navbar > .nav-link.active{
+    color: #21A028;
+}
 .navbar-dark .nav-navbar > .nav-link{
-    color: #343434;
+    color: #707070;
 }
 .navbar-dark .nav-navbar > .nav-link:hover{
     color: $maincolor;
@@ -306,12 +326,7 @@ body{
         height: 250px !important;
     }   
 }
-@media screen and (max-width: 991.98px){
-    .navbar-expand-lg .navbar-mobile{
-        background-color: $maincolor !important;
-    }
 
-}
 
 // header
 .header{
