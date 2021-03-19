@@ -4,6 +4,7 @@
 $maincolor : #7ac977;
 $green-success: #21A028;
 $green: #4bb747;
+$green-dark: #53cf00;
 $gray:#cccccc;
 $dark-gray:#88888899;
 $gold:#dfa743;
@@ -68,7 +69,9 @@ body{
 .mt-nav{
     margin-top: 25px;
 }
-
+.bg-green-dark{
+    background-color: $green-dark;
+}
 // .max-height{
 //     max-height: 722px;
 //     min-height: 722px;
@@ -81,6 +84,9 @@ body{
 }
 .border-2{
     border:2px solid rgba(0,0,0,0.2); 
+}
+.border-5{
+    border-left:5px solid $green-success; 
 }
 .fs-30{
     font-size: 30px;
@@ -623,6 +629,7 @@ body{
     
     
 }
+
 .checkout{
     padding: 3rem 0;
     &__img{
@@ -641,10 +648,7 @@ body{
     }
 }
 .product-details{
-    &__img{
-        height: 450px;
-        width: 100%;
-    }
+    
 }
 
 // Form Block
