@@ -82,7 +82,7 @@ body{
 .offcanvas_search{
     top: 160px !important;
     @media screen and (max-width:450px){
-        top: 150px !important;
+        top: 120px !important;
     }
 }
 .register-card{
@@ -139,6 +139,9 @@ body{
 .navbar{
     top: 0;
     box-shadow: 0 4px 9px rgba(0,0,0,0.05);
+    @media screen and (min-width:800px) {
+        margin-top: 40px;
+    }
 }
 .badge-pos-right{
     top: 1rem !important;
@@ -283,6 +286,50 @@ body{
                 left: -15px;
             }
         }
+    }
+}
+.header-career-1{
+    @media screen and (min-width:1000px) {
+        padding-left: 170px;
+    }
+}
+.header-career-2{
+    @media screen and (min-width:1000px) {
+        padding-left: 170px;
+    }
+}
+.header-career-1{
+    @media screen and (max-width:1000px) {
+        padding-left: 40px;
+    }
+}
+.header-career-2{
+    @media screen and (max-width:1000px) {
+        padding-left: 20px;
+    }
+}
+.header-about{
+    @media screen and (min-width:1000px) {
+        padding-left: 170px;
+    }
+    @media screen and (max-width:1000px) {
+        padding-left: 70px;
+    }
+}
+.header-brands{
+    @media screen and (min-width:1000px) {
+        padding-left: 170px;
+    }
+    @media screen and (max-width:1000px) {
+        padding-left: 70px;
+    }
+}
+.header__product-detail{
+    @media screen and (min-width:1000px) {
+        padding-left: 170px;
+    }
+    @media screen and (max-width:1000px) {
+        padding-left: 70px;
     }
 }
 .heading{
