@@ -293,6 +293,36 @@ body {
   max-width: 55px;
 }
 
+.header__products .before-after {
+  position: relative;
+  color: #ff5733;
+  width: 160px;
+  margin: 25px auto;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+  overflow: hidden;
+  height: 20px;
+}
+
+.header__products .before-after:before, .header__products .before-after:after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  display: block;
+  border-bottom: 1px solid #e1e1e1;
+  margin-top: -1px;
+}
+
+.header__products .before-after:after {
+  right: -15px;
+}
+
+.header__products .before-after:before {
+  left: -15px;
+}
+
 .heading {
   font-size: 3.5rem;
   text-align: center;
