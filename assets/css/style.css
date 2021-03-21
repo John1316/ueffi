@@ -75,11 +75,15 @@ body {
   background-color: #53cf00;
 }
 
+.slick-prev, .slick-next {
+  background-color: transparent !important;
+}
+
 .offcanvas_search {
   top: 160px !important;
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 450px) {
   .offcanvas_search {
     top: 150px !important;
   }
@@ -379,66 +383,13 @@ body {
   }
 }
 
-.header__products .before-after {
-  position: relative;
-  width: 160px;
-  margin: 25px auto;
-  font-size: 13px;
-  line-height: 20px;
-  text-align: center;
-  overflow: hidden;
-  height: 20px;
+.social-icon-animation:hover {
+  background-color: #21A028;
+  color: #fff;
 }
 
-.header__products .before-after i {
-  color: #ff5733;
-}
-
-.header__products .before-after:before {
-  content: '';
-  position: absolute;
-  width: 50%;
-  top: 50%;
-  display: block;
-  border-bottom: 1px solid #e1e1e1;
-  margin-top: -1px;
-  right: -15px;
-}
-
-.header__products .before-after:after {
-  content: '';
-  position: absolute;
-  width: 50%;
-  top: 50%;
-  display: block;
-  border-bottom: 1px solid #e1e1e1;
-  margin-top: -1px;
-  left: -15px;
-}
-
-.header__caption {
-  position: absolute;
-  top: 50%;
-  left: 10%;
-}
-
-.header__caption--h4 {
-  font-size: 3.5rem;
-  font-weight: 600;
-}
-
-.header__caption--h6 {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-@media screen and (max-width: 900px) {
-  .header__caption {
-    display: none;
-  }
-  .h-600px-responsive {
-    height: 600px;
-  }
+.social-icon-animation:hover i {
+  color: #fff;
 }
 
 .products {
@@ -539,20 +490,8 @@ body {
 }
 
 .why .card {
-  transition: all 0.5s;
-}
-
-.why .card::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border: 1px solid #fff;
-  opacity: 0;
-  transition: all 0.3s;
-  z-index: 2;
+  transition: all 0.7s;
+  cursor: pointer;
 }
 
 .why .card:hover {
@@ -567,55 +506,8 @@ body {
   color: #000;
 }
 
-.why .card-body:hover {
-  border: 1px solid #ccc;
-}
-
-.why .card-body:hover::after {
-  top: 5px;
-  bottom: 5px;
-  left: 5px;
-  right: 5px;
-}
-
-.what-we-offer {
-  padding: 100px 0;
-}
-
-.what-we-offer .slick-prev {
-  left: -5rem;
-}
-
-.what-we-offer .slick-next {
-  right: -5rem;
-}
-
-@media screen and (max-width: 1024px) {
-  .ad {
-    margin-top: 50px;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .ad .h-500px {
-    height: 250px;
-  }
-}
-
-.ads {
-  padding: 0 0 3rem  0;
-}
-
-.advantages {
-  padding: 3rem 0;
-}
-
-.sponsors {
-  padding: 2rem 0;
-}
-
-.newarrived {
-  padding: 50px 0;
+.why .card:hover .card-body {
+  border: 1px solid #fff;
 }
 
 .footer {
@@ -624,26 +516,6 @@ body {
 
 .footer .img-fluid {
   height: 30px;
-}
-
-#cart {
-  position: fixed;
-  top: 0;
-  right: -400px;
-  width: 400px;
-  z-index: 99999999999999999;
-}
-
-#cart img {
-  height: 100px;
-}
-
-#cart__options {
-  background-color: #fff;
-  padding: 30px;
-  overflow-y: auto;
-  max-height: 722px;
-  min-height: 100vh;
 }
 
 .loader {
@@ -672,95 +544,6 @@ body {
   left: 43%;
 }
 
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media screen and (max-width: 800px) {
-  #cart__options {
-    padding: 50px;
-  }
-}
-
-.pageheader {
-  padding: 10rem 0 2.5rem 0;
-  background-image: url(../img/banner/ShopBanner.png);
-  background-size: 100% 100%;
-}
-
-.pageheader__caption--h4 {
-  font-size: 3.5rem;
-  font-weight: 600;
-}
-
-.pageheader__caption--h6 {
-  font-size: 1.5rem;
-}
-
-.productlist {
-  padding: 4rem 0;
-}
-
-.productlist .card-img-top .badges-product {
-  position: absolute;
-  bottom: 0;
-  padding: 1rem 1.25rem;
-}
-
-.productlist .card {
-  position: relative;
-}
-
-.productlist .card .img1 {
-  z-index: 10;
-}
-
-.productlist .card .img2 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 9;
-  transition: all 0.5s;
-}
-
-.productlist .card:hover .img2 {
-  z-index: 11;
-}
-
-.productlist .card .badges-product {
-  position: absolute;
-  top: 235px;
-  z-index: 20;
-  padding: 1rem 1.25rem;
-}
-
-.checkout {
-  padding: 3rem 0;
-}
-
-.checkout__img {
-  height: 120px;
-}
-
-@media screen and (max-width: 800px) {
-  .checkout {
-    padding: 3rem 0;
-    text-align: center;
-  }
-  .checkout__img {
-    height: 200px;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-}
-
 .Form-main {
   border: 1px #cccccc solid;
   border-radius: 4px;
@@ -772,138 +555,6 @@ body {
 
 .bg-green {
   background-color: #4bb747;
-}
-
-.profile__header {
-  height: 150px;
-  background-size: cover;
-  background-image: url(../img/cover__home.jpeg);
-}
-
-.profile__img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-}
-
-.profile .nav-pills .nav-link {
-  padding: 10px 20px;
-}
-
-.profile .nav-pills .nav-link.active, .profile .nav-pills .show > .nav-link {
-  border-left: 2px solid #7ac977;
-  color: #000;
-  background-color: #fff;
-}
-
-.profile__past .last-stage i {
-  color: #4B4A54;
-}
-
-.profile__past .last-stage h4 {
-  color: #4B4A54;
-}
-
-.profile__past .last-stage p {
-  color: #4B4A54;
-}
-
-.profile__past .active-stage i {
-  color: #7ac977;
-}
-
-.profile__past .active-stage h4 {
-  color: #7ac977;
-}
-
-.profile__past .active-stage p {
-  color: #cccccc;
-}
-
-.profile__past .next-stage i {
-  color: #cccccc;
-}
-
-.profile__past .next-stage h4 {
-  color: #cccccc;
-}
-
-.profile__past .next-stage p {
-  color: #cccccc;
-}
-
-@media screen and (min-width: 1000px) {
-  .profile__right {
-    max-height: 500px;
-    overflow-y: auto;
-  }
-}
-
-@media screen and (max-width: 1025px) {
-  .what-we-offer .slick-prev {
-    display: none !important;
-  }
-  .what-we-offer .slick-next {
-    display: none !important;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .right-img {
-    display: none;
-  }
-  .details__general--info p {
-    margin: 30px 0 10px 0;
-  }
-  .details__general--info h4 {
-    margin: 30px 0 10px 0;
-  }
-  .modal-login #close {
-    top: 20px;
-    right: 20px;
-  }
-  .booking__search--labelnone {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .filter .card .col-lg-4 .img-main {
-    width: 100%;
-  }
-  .filter .card .card-body .card-description {
-    margin-top: 20px;
-  }
-  .booking .user-cancellation .list {
-    margin-bottom: 20px;
-  }
-  .booking .user-cancellation .tabs .card .col-lg-4 .img-main {
-    width: 100%;
-  }
-  .booking .user-cancellation .card .card-body .card-description {
-    margin-top: 20px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .heading::before {
-    display: block;
-    margin-left: auto;
-  }
-  .heading::after {
-    display: block;
-    margin-right: auto;
-    margin-top: 16px;
-  }
-  .profile__right {
-    margin-top: 20px;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .login .w-400 {
-    width: 300px !important;
-  }
 }
 
 input[type="checkbox"] {

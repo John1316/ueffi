@@ -76,9 +76,12 @@ body{
 //     max-height: 722px;
 //     min-height: 722px;
 // }
+.slick-prev, .slick-next{
+    background-color: transparent !important;
+}
 .offcanvas_search{
     top: 160px !important;
-    @media screen and (max-width:410px){
+    @media screen and (max-width:450px){
         top: 150px !important;
     }
 }
@@ -337,70 +340,13 @@ body{
 }
 
 
-// header
-.header{
-    &__products{
-        .before-after{
-            position: relative;
-            width: 160px;
-            margin: 25px auto;
-            font-size: 13px;
-            line-height: 20px;
-            text-align: center;
-            overflow: hidden;
-            height: 20px;
-            i{
-                color: #ff5733;
-            }
-            &:before{
-                content: '';
-                position: absolute;
-                width: 50%;
-                top: 50%;
-                display: block;
-                border-bottom: 1px solid #e1e1e1;
-                margin-top: -1px;
-                right: -15px;
-
-            }
-            &:after{
-                content: '';
-                position: absolute;
-                width: 50%;
-                top: 50%;
-                display: block;
-                border-bottom: 1px solid #e1e1e1;
-                margin-top: -1px;
-                left: -15px;
-
-            }
-        }
+.social-icon-animation:hover{
+    background-color: $green-success;
+    color: #fff;
+    i{
+        color: #fff;
     }
-    &__caption{
-        position: absolute;
-        top: 50%;
-        left: 10%;
-
-        &--h4{
-            font-size: 3.5rem;
-            font-weight: 600;
-        }
-        &--h6{
-            font-size: 1.5rem;
-            font-weight: 600;
-        }
-    }
-
-}
-@media screen and (max-width:900px)
-{
-    .header__caption{
-        display: none;
-    }
-    .h-600px-responsive{
-        height: 600px;
-    }
-}
+}   
 // products
 
 .products{
@@ -490,20 +436,8 @@ body{
 }
 .why{
     .card{
-        transition: all 0.5s;
-        &::after{
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border: 1px solid #fff;
-            opacity: 0;
-            -webkit-transition: all 0.3s;
-            transition: all 0.3s;
-            z-index: 2;
-        }
+        transition: all 0.7s;
+        cursor: pointer;
     }
     .card:hover{
         background-color: #21A028;
@@ -515,57 +449,12 @@ body{
         }
         
     }
-    .card-body:hover{
-        &::after{
-            top: 5px;
-            bottom: 5px;
-            left: 5px;
-            right: 5px;
-        }
-        border: 1px solid #ccc;
-    }
-}
-// what-we-offer
-.what-we-offer{
-    padding: 100px 0;
-    .slick-prev{
-        left: -5rem;
-    }
-    .slick-next{
-        right: -5rem;
-    }
-}
-// ad section
-@media screen and (max-width:1024px){
-    .ad{
-        margin-top: 50px;
-    }
-}
-@media screen and (max-width:800px){
-    .ad{
-        .h-500px{
-            height: 250px;
-        }
+    .card:hover .card-body{
+        
+        border: 1px solid #fff;
     }
 }
 
-// ads section
-.ads{
-    padding:0 0 3rem  0;
-}
-// advantages sections
-.advantages{
-    padding: 3rem 0;
-
-}
-// sponsors information
-.sponsors{
-    padding: 2rem 0;
-}
-// new arrived 
-.newarrived{
-    padding: 50px 0;
-}
 // footer
 .footer{
     background-color: #252525 !important;
@@ -573,24 +462,7 @@ body{
         height: 30px;
     }
 }
-#cart{
-    position: fixed;
-    top:0;
-    right: -400px; 
-    width: 400px;
-    z-index: 99999999999999999;
-    img{
-        height: 100px;
-    }
-}
 
-#cart__options{
-    background-color:#fff;
-    padding: 30px;
-    overflow-y: auto;
-    max-height: 722px;
-    min-height: 100vh;
-}
 // loader
 .loader{
     position: fixed;
@@ -620,90 +492,11 @@ body{
     }
 }
 
-@keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(360deg);
-    }
-}
-@media screen and (max-width:800px){
-    #cart__options{
-        padding: 50px;
-    }
 
-}
-// productspage
-.pageheader{
-    padding: 10rem 0 2.5rem 0;
-    background-image: url(../img/banner/ShopBanner.png);
-    background-size: 100% 100%;
-    &__caption{
-        &--h4{
-            font-size: 3.5rem;
-            font-weight: 600;
-        }
-        &--h6{
-            font-size: 1.5rem;
-        }
-    }
-}
-.productlist{
-    padding: 4rem 0;
-    .card-img-top .badges-product {
-        position: absolute;
-        bottom: 0;
-        padding: 1rem 1.25rem;
-    }
-    .card{
-        position: relative;
-        .img1{
-            z-index: 10;
-        }
-        .img2{
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 9;
-            transition: all 0.5s;
-        }
-        &:hover .img2{
-            z-index: 11;
-        }
-        .badges-product{
-            position: absolute;
-            top: 235px;
-            z-index: 20;
-            padding: 1rem 1.25rem;
-        }
-    }
-    
-    
-}
 
-.checkout{
-    padding: 3rem 0;
-    &__img{
-        height: 120px;
-    }
-}
-@media screen and (max-width:800px){
-    .checkout{
-        padding: 3rem 0;
-        text-align: center;
-        &__img{
-            height: 200px;
-            width: 100%;
-            margin-bottom: 20px;
-        }
-    }
-}
-.product-details{
-    
-}
+
+
+
 
 // Form Block
 .Form-main{
@@ -722,180 +515,12 @@ body{
 
 
 
-// profile page
-.profile{
-    &__header{
-        height: 150px;
-        background-size: cover;
-        background-image: url(../img/cover__home.jpeg);
-    }
-    &__img{
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-    }
-    .nav-pills .nav-link{
-        padding: 10px 20px;
-    }
-    .nav-pills .nav-link.active, .nav-pills .show>.nav-link{
-        border-left: 2px solid $maincolor;
-        color: #000;
-        background-color: #fff;
-    }
-    
-    &__past{
-        .last-stage{
-            i{
-                color: #4B4A54;
-            }
-            h4{
-                color: #4B4A54;
-            }
-            p{
-                color: #4B4A54;
-            }
-        }
-        .active-stage{
-            i{
-                color: $maincolor;
-            }
-            h4{
-                color: $maincolor;
-            }
-            p{
-                color: $gray;
-            }
-        }
-        .next-stage{
-            i{
-                color: $gray;
-            }
-            h4{
-                color: $gray;
-            }
-            p{
-                color: $gray;
-            }
-        }
-    }
-}
-@media screen and (min-width:1000px){
-    .profile{
-        &__right{
-            max-height: 500px;
-            overflow-y: auto;
-        }
-
-    }
-}
 
 
 
 
-// media queries
-@media screen and (max-width:1025px){
-    .what-we-offer{
-        .slick-prev{
-            display: none !important;
-        }
-        .slick-next{
-            display: none !important;
-        }
-    }
-}
-@media screen and (max-width:800px){
-    .right-img{
-        display: none;
-    }
-    .details{
-        &__general{
-            &--info{
-                p{
-                    margin: 30px 0 10px 0;
-                }
-                h4{
-                    margin: 30px 0 10px 0;
-                }
-            }
-        }
-    }
-    .modal-login{
-        #close{
-            top: 20px;
-            right: 20px;
-        }
-    }
-    .booking__search--labelnone{
-        display: none;
-    }
-}
-
-@media screen and (max-width:1000px){
-    .filter{
-        .card{
-            .col-lg-4{
-                    .img-main{
-                        width: 100%;
-                    }
-            }
-            .card-body{
-                .card-description{
-                    margin-top: 20px;
-                }
-            }
-        }
-    }
-    .booking{
-        .user-cancellation{
-            .list{
-                margin-bottom: 20px;
-            }
-            .tabs{
-                .card{
-                    .col-lg-4{
-                        .img-main{
-                            width: 100%;
-                        }
-                    }
-                }
-            }
-            .card{
-                .card-body{
-                    .card-description{
-                        margin-top: 20px;
-                    }
-                }
-            }
-        }
-    }
-}
 
 
-@media screen and (max-width:600px){
-    .heading{
-        &::before{
-            display: block;
-            margin-left: auto;
-        }
-        &::after{
-            display: block;
-            margin-right: auto;
-            margin-top: 16px;
-        }
-    }
-    .profile{
-        &__right{
-            margin-top: 20px;
-        }
-    }
-}
-@media screen and (max-width:450px){
-    .login{
-        .w-400{
-            width: 300px !important;
-        }
-    }
-}
 input[type="checkbox"] {
     visibility: hidden;
 }
