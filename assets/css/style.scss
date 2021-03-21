@@ -78,6 +78,9 @@ body{
 // }
 .offcanvas_search{
     top: 160px !important;
+    @media screen and (max-width:410px){
+        top: 150px !important;
+    }
 }
 .register-card{
     width: 750px;
@@ -184,6 +187,9 @@ body{
     width: 1px;
     background: #ccc;
 }
+.a-link:hover{
+    color: $green-success !important;
+}
 .hr-gray-100
 {
     height: 1px;
@@ -191,7 +197,7 @@ body{
     background-color: #ccc;
 }
 .btn-main{
-    background-color: $maincolor;
+    background-color: green;
     color: #fff;
     &:hover{
         color: #fff;
@@ -316,6 +322,9 @@ body{
         .navbar-brand{
             .logo{
                 height: 65px;
+                @media screen and (max-width:410px){
+                    width: 215px;
+                }
             }
         }
     }
@@ -462,28 +471,58 @@ body{
     }
 }
 // about
-.about{
-    background-image: linear-gradient(to right bottom , rgba(2, 20, 162 ,0.5) , rgba(2, 20, 162 ,0.5)), url(../img/single-img-twentyone.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    padding: 3rem 0;
-    .heading{
-        &::before{
-            background-color: #fff;
-        }
-        &::after{
-            background-color: #fff;
-        }
+.about-us{
+    .h-450px{
+        height: 450px;
+    }
+    .border-raduis-100{
+        border-radius: 50%;
     }
     .card{
-        background-color: transparent;
-        .card-body{
-            padding: 35px;
-            .btn{
-                padding: 1.5rem;
-                border-radius: 5px;
-            }
+        overflow: hidden;
+        img{
+            transition: all 1s;
         }
+        &:hover img{
+            transform: scale(1.2,1.2);
+        }
+    }
+}
+.why{
+    .card{
+        transition: all 0.5s;
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 1px solid #fff;
+            opacity: 0;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+            z-index: 2;
+        }
+    }
+    .card:hover{
+        background-color: #21A028;
+        i{
+            color: #fff;
+        }
+        p{
+            color: #000;
+        }
+        
+    }
+    .card-body:hover{
+        &::after{
+            top: 5px;
+            bottom: 5px;
+            left: 5px;
+            right: 5px;
+        }
+        border: 1px solid #ccc;
     }
 }
 // what-we-offer
