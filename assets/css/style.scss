@@ -122,6 +122,9 @@ body{
 .navbar-dark .nav-navbar > .nav-link.active{
     color: #21A028;
 }
+.nav-navbar .nav .nav-link.active{
+    color: #21A028 !important;
+}
 .navbar-dark .nav-navbar > .nav-link{
     color: #707070;
 }
